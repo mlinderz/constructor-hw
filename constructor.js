@@ -1,40 +1,25 @@
-function shape (name, sides, width, height){
+function shape (name, sides){
     this.name = name;
     this.sides = sides;
-    this.width = width;
+    }
+
+function rectangle (height, width, name, sides){
     this.height = height;
-    this.number = number;
-    this.area = function () {
-        return this.height*this.width + " sqaure units"
-    }
-    this.perimeter = function(){
-        return (2*(this.height))+(2*(this.width))
-    }
+    this.width = width;
+
+    shape.call(this, name, sides)
 }
 
-function square (name, sides,length ){
-    this.name = name;
-    this.sides = sides;
-    this.length = length;
-    this.number = number;
-    this.area = function () {
-        return this.length*this.length + " sqaure units"
-    }
-    this.perimeter = function(){
-        return (4*(this.length))
-    }
+rectangle.prototype = object.create(shape.prototype);
+
+rectangle.prototype.area=function(){
+    console.log(this.height*this.width);
 }
 
-var rectangle = new shape ('rectangle', '4', 3, 6);
+rectangle.prototype.perimeter=function(){
+    console.log(this.height*2 + this.width*2)
+}
 
-var square = new square ('square', '4', 4)  
-
-rectangle
-
-console.log(rectangle.area ())
-
-console.log(rectangle.perimeter()) 
-
-console.log(square.perimeter())
-
-console.log(square.area())
+function square(height, name, sides){
+    rectangle.call(this, height, height, name, sides);
+}
