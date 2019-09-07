@@ -1,4 +1,4 @@
-function shape (name, sides, width, height, number){
+function shape (name, sides, width, height){
     this.name = name;
     this.sides = sides;
     this.width = width;
@@ -12,7 +12,7 @@ function shape (name, sides, width, height, number){
     }
 }
 
-function square (name, sides,length, number){
+function square (name, sides,length ){
     this.name = name;
     this.sides = sides;
     this.length = length;
