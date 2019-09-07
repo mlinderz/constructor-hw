@@ -25,9 +25,9 @@ function square (name, sides,length ){
     }
 }
 
-var rectangle = new shape ('rectangle', '4', 3, 6, '5');
+var rectangle = new shape ('rectangle', '4', 3, 6);
 
-var square = new square ('square', '4', 4, 7)  
+var square = new square ('square', '4', 4)  
 
 rectangle
 
